@@ -1,9 +1,15 @@
-const secretWord = "CRANE"; // Hardcoded for now (you can later replace with backend)
+const secretWord = "CRANE";
 let currentRow = 0;
 
 const input = document.querySelector('.input');
 const button = document.querySelector('.submit-btn');
 const rows = document.querySelectorAll('.row');
+
+input.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        button.click();
+    }
+});
 
 button.addEventListener('click', handleGuess);
 
